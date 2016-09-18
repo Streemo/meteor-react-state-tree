@@ -1,6 +1,6 @@
 import { Meteor } from "meteor/meteor";
 import { Mongo } from "meteor/mongo";
-import { proj } from "./utils.js";
+import { proj, omit } from "./utils.js";
 
 export default class State {
   constructor(tree){
@@ -27,7 +27,7 @@ export default class State {
     this._store.update('state',{$unset:proj(tree,"")})
   }
   get(tree){
-    return this._store.findOne("state", {fields:{_id:0,...proj(tree,1)}})
+    return omit(this._store.findOne("state", {fields:proj(tree,1)}),"_id")
   }
   set(tree){
     try {

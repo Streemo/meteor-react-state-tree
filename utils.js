@@ -14,3 +14,7 @@ export const proj = function(tree,val,isCombinatoric,root="",reduced={}){
   }
   reduced[root] = val || tree;
 }
+export const omit = function(obj,key){
+  delete obj[key];
+  return obj;
+}
