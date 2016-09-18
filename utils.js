@@ -1,5 +1,5 @@
 export const isTree = function(obj){
-  return typeof obj === "object" && !!obj;
+  return typeof obj === "object" && !!obj && toString.call(obj) !== "[object Date]";
 }
 // proj: N => S, takes a nested tree and maps it to a non-nested tree.
 // Idempotency; proj: S => S is I, the identity.
