@@ -27,7 +27,7 @@ export default class State {
     this._store.update('state',{$unset:proj(tree,"")})
   }
   get(tree){
-    return this._store.findOne("state", {fields:proj(tree,1)})
+    return this._store.findOne("state", {fields:{_id:0,...proj(tree,1)}})
   }
   set(tree){
     try {
