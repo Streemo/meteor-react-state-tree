@@ -1,6 +1,6 @@
 Package.describe({
   name: 'streemo:meteor-react-state-tree',
-  version: '0.0.4',
+  version: '0.0.5',
   // Brief, one-line summary of the package.
   summary: 'Easy global scopable reactive state for Meteor, useful in React.',
   // URL to the Git repository containing the source code for this package.
