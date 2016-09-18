@@ -31,7 +31,7 @@ export default class State {
   }
   set(tree){
     try {
-      this._store.update("state", {$set:{proj(tree)}})
+      this._store.update("state", {$set:proj(tree)})
     } catch(e){
       throw new Meteor.Error('Invalid Tree',"You may not set keys for non-object values.")
     }
